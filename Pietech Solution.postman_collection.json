@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "4147d1a6-9101-403e-817e-88d46d855a7f",
+		"name": "Pietech Solution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kaz\",\r\n    \"age\":65\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/list?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "page number"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "limit for number of users on 1 page"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/filter?sortBy=age&orderBy=desc&limit=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "searchBy",
+									"value": "name",
+									"description": "searching fiield name",
+									"disabled": true
+								},
+								{
+									"key": "searchValue",
+									"value": "ravi",
+									"description": "search Value",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "age",
+									"description": "sorting field name"
+								},
+								{
+									"key": "orderBy",
+									"value": "desc",
+									"description": "o ascending sort= asc, descending sort= desc"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "limit for number of users on 1 page"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
